@@ -42,7 +42,23 @@ public class DataComplementService {
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 		}
 	}
-		
+	
+
+	public ResponseEntity<DataComplementDto> updateData(Long id, DataComplementDto dataComplementDto) {
+  		Optional<DataComplement> capturarData = repository.findById(id);
+		if(capturarData.isPresent()) {
+			DataComplement sondaInfo = capturarData.get();
+ 			sondaInfo.setVelocidade(dataComplementDto.getVelocidade());
+ 			sondaInfo.setExcentricidade(dataComplementDto.getExcentricidade());
+ 			sondaInfo.setInclinacao(dataComplementDto.getInclinacao());
+ 			sondaInfo.setTemperatura(dataComplementDto.getTemperatura());
+ 			sondaInfo.setSatelitesNaturais(dataComplementDto.getSatelitesNaturais());
+			repository.save(sondaInfo);
+			return ResponseEntity.ok(mapper.map(sondaInfo, DataComplementDto.class));
+ 		} else {
+ 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+ 		}
+	}
 }
 
 
