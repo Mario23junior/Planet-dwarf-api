@@ -31,8 +31,8 @@ public class PlanetService {
 				   .body(mapper.map(modelSave, PlanetDto.class));
 	}
 	
-	public Planet bodysave(Planet planetDto) {
- 		return repository.save(planetDto); 
+	public Planet bodysave(Planet planet) {
+ 		return repository.save(planet); 
 	}
 	
 	public void ValidValueDuplicate(PlanetDto planetDto) {
