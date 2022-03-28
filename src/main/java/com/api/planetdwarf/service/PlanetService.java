@@ -1,5 +1,7 @@
 package com.api.planetdwarf.service;
 
+import java.util.Optional;
+
 import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -42,6 +44,15 @@ public class PlanetService {
 		}
 	}
 	
+	public ResponseEntity<PlanetDto> listId(Long id) {
+		Optional<Planet> idPla = repository.findById(id);
+		if(idPla.isPresent()) {
+			return ResponseEntity.ok(mapper.map(idPla.get(), PlanetDto.class));
+		} else {
+			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+		}
+	}
+
 }
 
 
