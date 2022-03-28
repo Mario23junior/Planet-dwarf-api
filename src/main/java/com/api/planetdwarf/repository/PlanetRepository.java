@@ -7,7 +7,7 @@ import com.api.planetdwarf.model.Planet;
 
 @Repository
 public interface PlanetRepository extends JpaRepository<Planet, Long> {
-  
+
 	Planet findByDesignacao(String designacao);
- 	
+
 }
