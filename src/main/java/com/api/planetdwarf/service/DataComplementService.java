@@ -20,7 +20,7 @@ public class DataComplementService {
 		this.mapper = mapper;
  	}
 	
-	public ResponseEntity<DataComplementDto> save(DataComplementDto dataComplementDto) {
+	public ResponseEntity<DataComplementDto> saveAllDataComple (DataComplementDto dataComplementDto) {
 		DataComplement bodyConvert = convertEnti(mapper.map(dataComplementDto, DataComplement.class));
 		return ResponseEntity
 				      .status(HttpStatus.OK)

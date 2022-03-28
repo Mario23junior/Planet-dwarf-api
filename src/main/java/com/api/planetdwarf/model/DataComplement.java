@@ -13,8 +13,8 @@ public class DataComplement {
 	private Long id;
 
 	private Double velocidade;
-	private Double Excentricidade;
-	private String Inclinacao;
+	private Double excentricidade;
+	private String inclinacao;
 	private Double temperatura;
 	private Integer satelitesNaturais;
 
@@ -39,19 +39,19 @@ public class DataComplement {
 	}
 
 	public Double getExcentricidade() {
-		return Excentricidade;
+		return excentricidade;
 	}
 
 	public void setExcentricidade(Double excentricidade) {
-		Excentricidade = excentricidade;
+		this.excentricidade = excentricidade;
 	}
 
 	public String getInclinacao() {
-		return Inclinacao;
+		return inclinacao;
 	}
 
 	public void setInclinacao(String inclinacao) {
-		Inclinacao = inclinacao;
+		this.inclinacao = inclinacao;
 	}
 
 	public Double getTemperatura() {
@@ -69,5 +69,7 @@ public class DataComplement {
 	public void setSatelitesNaturais(Integer satelitesNaturais) {
 		this.satelitesNaturais = satelitesNaturais;
 	}
+
+	
 
 }
