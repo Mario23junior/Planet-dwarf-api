@@ -1,5 +1,7 @@
 package com.api.planetdwarf.service;
 
+import java.util.Optional;
+
 import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -31,4 +33,37 @@ public class DataComplementService {
  		return repository.save(dataComplement);
 	}
 	
+	
+	public ResponseEntity<DataComplementDto> listId(Long id) {
+		Optional<DataComplement> listId = repository.findById(id);
+		if(listId.isPresent()) {
+			return ResponseEntity.ok(mapper.map(listId.get(), DataComplementDto.class));
+		} else {
+			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+		}
+	}
+		
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
