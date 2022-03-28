@@ -3,7 +3,7 @@
 <h1 align="center">API Planet dwarf</h1>
 
 <h3 align="center">
-API REST de código aberto para dados de consulta de  pesquisa  as informações nelas contidadas com o objetivo de estabelecer resultados relevantes <a href="https://www.nasa.gov/subject/6893/nebulae/" target="_blank">União Astronômica Internacional</a>
+API REST de código aberto para dados de consulta de  pesquisa  as informações nelas contidadas com o objetivo de estabelecer resultados relevantes <a href="https://www.iau.org/" target="_blank">União Astronômica Internacional</a>
  <a href="https://www.iau2006.org/"usando como base organizacional um sistema de CRUD
 <p align="center">
  
