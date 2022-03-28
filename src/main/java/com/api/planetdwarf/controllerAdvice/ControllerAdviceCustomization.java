@@ -18,7 +18,7 @@ public class ControllerAdviceCustomization {
 	public ModelReturnErro ReturnErroExceptionMessage(ReturnErroExceptionMessage ex,WebRequest request) {
 		ModelReturnErro message = new ModelReturnErro(
 				HttpStatus.NOT_FOUND.value(),
-				new Date(0),
+				new Date(),
 				ex.getMessage(),
 				request.getDescription(false));
 				

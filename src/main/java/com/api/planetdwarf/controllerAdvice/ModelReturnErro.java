@@ -2,9 +2,12 @@ package com.api.planetdwarf.controllerAdvice;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 public class ModelReturnErro {
    
 	private Integer status;
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
 	private Date timestamp;
 	private String message;
 	private String path;
