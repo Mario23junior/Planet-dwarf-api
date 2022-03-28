@@ -1,6 +1,7 @@
 package com.api.planetdwarf.controller;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -36,6 +37,11 @@ public class DataComplementController {
 	public ResponseEntity<DataComplementDto> update(@RequestBody DataComplementDto dataComplementDto, 
 			@PathVariable Long id) {
 		return service.updateData(id, dataComplementDto);
+	}
+	
+	@DeleteMapping("{id}")
+	public ResponseEntity<DataComplementDto> delete(@PathVariable Long id) {
+		return service.delete(id);
 	}
 }
 
