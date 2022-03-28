@@ -52,6 +52,22 @@ public class PlanetService {
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 		}
 	}
+	
+	public ResponseEntity<PlanetDto> updateId(Long id, PlanetDto planetDto) {
+		Optional<Planet> updateList = repository.findById(id);
+		if(updateList.isPresent()) {
+			Planet IdInfo = updateList.get();
+			IdInfo.setDesignacao(planetDto.getDesignacao());
+			IdInfo.setDiametro(planetDto.getDiametro());
+			IdInfo.setMassa(planetDto.getMassa());
+			IdInfo.setRaioEquatorial(planetDto.getRaioEquatorial());
+			IdInfo.setDataComplements(planetDto.getDataComplements());
+			repository.save(IdInfo);
+			return  ResponseEntity.ok(mapper.map(IdInfo, PlanetDto.class));					
+		} else {
+			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+		}
+	}
 
 }
 
