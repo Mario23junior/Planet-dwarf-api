@@ -10,6 +10,7 @@
  | |_) || || (_| || | | ||  __/| |_ \__ \       / ____ \ | |     _| |_ 
  | .__/ |_| \__,_||_| |_| \___| \__||___/      /_/    \_\|_|    |_____|
  | |                                                                   
- |_|                                     
-    Version :: ${spring-boot.version} ::
-    
+ |_|    
+                                  
+ Application Version:${application.version} ${AnsiColor.RED} :: Spring Boot${spring-boot.formatted-version} :: ${AnsiColor.RED}
+   
